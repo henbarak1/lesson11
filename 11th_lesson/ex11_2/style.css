@@ -1,0 +1,171 @@
+body{
+    display: flex;
+    align-items: center ; 
+    justify-content: center;
+    
+}
+.main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    top: 250px;
+}
+button{ 
+    height: 50px;
+    width: 100px;
+}
+.top{
+    display: flex;
+    align-items: center ; 
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+
+}
+.bottom{
+    position: relative;
+    display: flex;
+    align-items: center ;
+    gap: 30px;
+    
+}
+.translateY{
+    position: relative;
+    height: 50px;
+    width: 100px;
+    overflow: hidden;
+    
+}
+.translateY::after{
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    content: ""; 
+    top:0;
+    left:0;
+}
+
+.translateY:hover::after{
+    content: "";
+   position:absolute;
+   
+    background-color: rgb(255, 0, 0);
+    transform: translateY(100%);
+    transition: all 1s;
+}
+.translateX{
+    position: relative;
+    height: 50px;
+    width: 100px;
+    overflow: hidden;
+    
+}
+.translateX::after{
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    content: ""; 
+    top:0;
+    left:0;
+}
+
+.translateX:hover::after{
+    content: "";
+   position:absolute;
+   
+    background-color: rgb(25, 0, 255);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.Rotate{
+    position: relative;
+    height: 50px;
+    width: 100px;
+    overflow: hidden;
+    
+}
+.Rotate::after{
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    content: ""; 
+    top:0;
+    left:0;
+}
+
+.Rotate:hover::after{
+    content: "";
+   position:absolute;
+   
+    background-color: rgb(255, 251, 0);
+    transform:  Rotate(30deg) translate(-100%,150%);
+
+    transition: all 1s;
+}
+.Scale{
+    position: relative;
+    height: 50px;
+    width: 100px;
+    overflow: hidden;
+    perspective: 200px;
+    
+}
+.Scale::after{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    content: ""; 
+    color: white;
+    top:0;
+    z-index: -1;
+    left:25px;
+}
+
+
+.Scale:hover::after{
+    content: "";
+   position:absolute;
+   
+    background-color: rgb(24, 24, 21);
+    transform:  translateZ(200px);
+z-index: 0;
+    transition: all 3s;
+}
+
+.Skew{
+    position: relative;
+    height: 50px;
+    width: 100px;
+    overflow: hidden;
+     
+
+}
+.Skew::after{
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    content: ""; 
+    color: white;
+    top:0;
+    
+    left:0px;
+
+}
+.Skew:hover{
+    transform: skew(30deg);
+    transform: all 3s;
+}
+
+.Skew:hover::after{
+    content: "";
+   position:absolute;
+   
+    background-color: rgb(24, 24, 21);
+    transform: skew(30deg);
+
+    transition: all 3s;
+}
+

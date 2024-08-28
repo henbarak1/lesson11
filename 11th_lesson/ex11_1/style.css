@@ -1,0 +1,41 @@
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    position: relative;
+
+    
+}
+.box::after{
+    content:' ';
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    transform: translateX(200px); 
+    animation: animated_box 2s infinite  ;
+
+}
+.box:hover{
+    /* animation: animated_box 1s infinite  ; */
+}
+@keyframes animated_box{
+    10%{
+        transform: translateX(-20px); 
+        background-color: rgb(122, 122, 192);
+    }
+    25%{
+        transform: translateX(-50px); 
+        background-color: rgb(136, 136, 156);
+
+    }
+    50%{
+        transform: translateX(-100px); 
+
+    }
+    100%{
+        transform: translateX(-200px); 
+        background-color: rgb(21, 21, 21);
+
+    }
+}

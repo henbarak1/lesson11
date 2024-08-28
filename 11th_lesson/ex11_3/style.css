@@ -1,0 +1,49 @@
+ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 70px;
+    
+}
+button{
+    height: 60px;
+    width: 60px;
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    overflow:hidden;
+}
+button::after{
+ 
+    content: " ";
+    position: absolute;
+    height: 10px;
+    width: 60px;
+    border-bottom: 2px solid black;
+    left: 0;
+    
+}
+button:hover::after{
+
+ 
+    transform: translateX(-250%);
+    transition: all 1s;
+
+}
+button::before{
+ 
+    content: " ";
+    position: absolute;
+    height: 25px;
+    width: 60px;
+    border-top: 2px solid black;
+    left: 0;
+}
+button:hover::before{
+
+ 
+    transform: translateX(250%);
+    transition: all 1s;
+}
